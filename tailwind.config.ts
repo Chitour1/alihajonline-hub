@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,39 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors
+				navy: {
+					50: '#f0f4fa',
+					100: '#d9e2f3',
+					200: '#b3c6e7',
+					300: '#8da9da',
+					400: '#668dd0',
+					500: '#4070c4',
+					600: '#345a9d',
+					700: '#274376',
+					800: '#1a2d4f',
+					900: '#0d1627',
+					950: '#081020'
+				},
+				gold: {
+					50: '#fbf8eb',
+					100: '#f6efc9',
+					200: '#eedb94',
+					300: '#e5c65f',
+					400: '#ddb639',
+					500: '#d4af37',
+					600: '#a78029',
+					700: '#7c601f',
+					800: '#524014',
+					900: '#29200a',
+					950: '#141005'
+				},
+			},
+			fontFamily: {
+				cairo: ['Cairo', 'sans-serif'],
+				amiri: ['Amiri', 'serif'],
+				scheherazade: ['Scheherazade New', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -70,25 +103,27 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'fade-in-up': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-in-up': 'fade-in-up 0.5s ease-out',
 			}
 		}
 	},
